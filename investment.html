@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inwestycja</title>
 
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 15px auto;
+    display: block;
+    background: white;
+    color: black;
+    border: none;
+    font-size: 18px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: black;
+    border: 2px solid white;
+    padding: 30px;
+    width: 80%;
+    max-width: 300px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Wybierz plan</h2>
+
+<button onclick="show()">200 PLN - 2000 PLN tygodniowo</button>
+<button onclick="show()">400 PLN - 4000 PLN tygodniowo</button>
+<button onclick="show()">600 PLN - 6000 PLN tygodniowo</button>
+
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <p>Przejdź do depozytu, aby rozpocząć inwestycję</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+</div>
+
+<script>
+function show(){
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
