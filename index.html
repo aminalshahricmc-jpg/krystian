@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logowanie</title>
+
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+input, button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Logowanie</h2>
+    <input type="email" id="email" placeholder="Wpisz email">
+    <button onclick="login()">Zaloguj</button>
+</div>
+
+<script>
+function login(){
+    let email = document.getElementById("email").value;
+
+    if(email === "krystianremus658@gmail.com"){
+        window.location.href = "home.html";
+    } else {
+        alert("Nieprawidłowy email");
+    }
+}
+</script>
+
+</body>
+</html>
