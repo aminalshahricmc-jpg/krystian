@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
 
+<style>
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+button {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 15px auto;
+    display: block;
+    background: white;
+    color: black;
+    border: none;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>ACTIVE CAPITAL COMPANY</h1>
+    <h2>zł6,300</h2>
+    <h3>Krystian Krzysztof Remus</h3>
+
+    <button onclick="go('investment.html')">Inwestycja</button>
+    <button onclick="go('withdrawal.html')">Wypłata</button>
+    <button onclick="go('deposit.html')">Depozyt</button>
+</div>
+
+<script>
+function go(page){
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>
